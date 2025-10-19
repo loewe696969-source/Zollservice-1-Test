@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zolldeklarant GmbH — Zollservice & Beratung</title>
+    <meta name="description" content="Zolldeklarant GmbH: Professionelle Zollabwicklung, Import & Export Beratung, Verzollung und Compliance." />
+    <style>
+         :root {
+            --red: #c8102e;
+            --black: #0b0b0b;
+            --muted: #6b6b6b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --radius: 14px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(180deg, var(--black) 0%, #111 100%);
+            color: #fff
+        }
+        
+        a {
+            color: var(--red);
+            text-decoration: none
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 28px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+            backdrop-filter: blur(4px);
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+        }
+        
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+        
+        .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: var(--red);
+            display: grid;
+            place-items: center;
+            font-weight: 700
+        }
+        
+        .logo span {
+            font-family: monospace
+        }
+        
+        nav {
+            display: flex;
+            gap: 18px;
+            align-items: center
+        }
+        
+        .btn {
+            background: var(--red);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 600
+        }
+        /* HERO */
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 36px;
+            align-items: center;
+            padding: 64px 6%;
+            min-height: 60vh
+        }
+        
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin: 0 0 12px
+        }
+        
+        .hero p.lead {
+            color: var(--muted);
+            max-width: 60ch;
+            margin: 0 0 20px
+        }
+        
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 22px;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+        /* features */
+        
+        .features {
+            display: flex;
+            gap: 18px;
+            margin-top: 18px
+        }
+        
+        .feature {
+            flex: 1;
+            padding: 14px;
+            border-radius: 10px;
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+        
+        .feature h4 {
+            margin: 6px 0 0
+        }
+        /* services */
+        
+        section.services {
+            padding: 40px 6%
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px
+        }
+        
+        .service {
+            background: linear-gradient(180deg, rgba(200, 16, 46, 0.06), rgba(0, 0, 0, 0.03));
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(200, 16, 46, 0.12)
+        }
+        /* contact */
+        
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 20px;
+            padding: 40px 6%
+        }
+        
+        form label {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+        
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: transparent;
+            color: #fff
+        }
+        
+        textarea {
+            min-height: 120px
+        }
+        
+        .muted {
+            color: var(--muted);
+            font-size: 13px
+        }
+        
+        footer {
+            padding: 30px 6%;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+        /* small screens */
+        
+        @media (max-width:920px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: unset;
+                padding: 36px 6%
+            }
+            .contact-wrap {
+                grid-template-columns: 1fr
+            }
+            header {
+                padding: 12px 16px
+            }
+            nav {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true"><span>ZD</span></div>
+            <div>
+                <div style="font-weight:700">Zolldeklarant GmbH</div>
+                <div style="font-size:12px;color:var(--muted)">Zollservice · Verzollung · Compliance</div>
+            </div>
+        </div>
+        <nav>
+            <a href="#services">Leistungen</a>
+            <a href="#about">Über uns</a>
+            <a href="#contact" class="btn">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Zollabwicklung, schnell & verlässlich</h1>
+                <p class="lead">Zolldeklarant GmbH unterstützt Importeure und Exporteure bei allen Schritten der Verzollung — von Zollanmeldungen über Präferenzen bis hin zur lückenlosen Dokumentation und Compliance-Prüfung.</p>
+
+                <div class="features">
+                    <div class="feature card">
+                        <strong>Schnelle Abwicklung</strong>
+                        <p class="muted">Automatisierte Prozesse, minimale Wartezeiten.</p>
+                    </div>
+                    <div class="feature card">
+                        <strong>Rechtssicher</strong>
+                        <p class="muted">Aktuelle Zollrechts-Expertise, prüfbare Dokumentation.</p>
+                    </div>
+                    <div class="feature card">
+                        <strong>Persönlicher Support</strong>
+                        <p class="muted">Fester Ansprechpartner während des gesamten Vorgangs.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="card">
+                <h3 style="margin-top:0">Schnellkontakt</h3>
+                <p class="muted">Kurz anrufen oder Nachricht senden — wir melden uns meist innerhalb einer Stunde.</p>
+                <div style="margin-top:12px">
+                    <div style="font-weight:700">+49 30 1234567</div>
+                    <div class="muted">Mo–Fr, 08:00–18:00</div>
+                </div>
+                <hr style="margin:16px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+                <div style="display:flex;gap:8px">
+                    <a class="btn" href="#contact">Anfrage stellen</a>
+                    <a href="#services" style="align-self:center">Mehr erfahren →</a>
+                </div>
+            </aside>
+        </section>
+
+        <section id="services" class="services">
+            <h2 style="margin:0 6% 16px 6%">Unsere Leistungen</h2>
+            <div class="grid">
+                <article class="service card">
+                    <h3>Importverzollung</h3>
+                    <p class="muted">Erstellung und Einreichung der Zollanmeldung, Berechnung von Abgaben und Steuern.</p>
+                </article>
+                <article class="service card">
+                    <h3>Exportdokumente</h3>
+                    <p class="muted">Ausfuhranmeldungen, Ursprungszeugnisse und Exportkontrollen.</p>
+                </article>
+                <article class="service card">
+                    <h3>Tarifierung & Klassifizierung</h3>
+                    <p class="muted">Taric-Codes, Zolltarifierung und Warentarifierung.</p>
+                </article>
+                <article class="service card">
+                    <h3>Compliance & Beratung</h3>
+                    <p class="muted">Risikobewertung, interne Prozesse und Schulungen.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" style="padding:40px 6%">
+            <div class="card">
+                <h2 style="margin-top:0">Über Zolldeklarant GmbH</h2>
+                <p class="muted">Wir sind ein Team aus erfahrenen Zollfachkräften mit Sitz in Berlin. Seit über 10 Jahren begleiten wir Unternehmen bei Import- und Exportprozessen und legen großen Wert auf Sicherheit, Transparenz und Effizienz.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-wrap">
+            <div>
+                <h2>Kontakt & Schnellformular</h2>
+                <p class="muted">Schreib uns kurz dein Anliegen — wir antworten schnellstmöglich.</p>
+
+                <form id="contactForm" class="card" novalidate>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required placeholder="Dein Name" />
+
+                    <label for="company">Firma (optional)</label>
+                    <input id="company" name="company" type="text" placeholder="Firma" />
+
+                    <label for="email">E‑Mail</label>
+                    <input id="email" name="email" type="email" required placeholder="name@beispiel.de" />
+
+                    <label for="service">Gewünschte Leistung</label>
+                    <select id="service" name="service">
+            <option>Importverzollung</option>
+            <option>Exportdokumente</option>
+            <option>Tarifierung</option>
+            <option>Beratung</option>
+          </select>
+
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" placeholder="Kurz beschreiben, was du brauchst..." required></textarea>
+
+                    <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
+                        <button type="submit" class="btn">Absenden</button>
+                        <div id="formMsg" class="muted" aria-live="polite"></div>
+                    </div>
+                </form>
+
+            </div>
+
+            <aside class="card">
+                <h3>Standort</h3>
+                <p class="muted">Zolldeklarant GmbH<br/>Musterstraße 12<br/>10117 Berlin</p>
+                <p class="muted">E-Mail: kontakt@zolldeklarant.de<br/>Telefon: +49 30 1234567</p>
+
+                <h4 style="margin-top:14px">Öffnungszeiten</h4>
+                <p class="muted">Mo–Fr 08:00–18:00</p>
+
+                <div style="margin-top:12px;text-align:center">
+                    <small class="muted">Karte (Platzhalter)</small>
+                    <div style="width:100%;height:160px;border-radius:10px;background:linear-gradient(180deg,rgba(0,0,0,0.2),rgba(0,0,0,0.35));display:grid;place-items:center;margin-top:8px;border:1px solid rgba(255,255,255,0.03)">Karte</div>
+                </div>
+            </aside>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <strong>Zolldeklarant GmbH</strong>
+            <div class="muted">© " + new Date().getFullYear() + " Alle Rechte vorbehalten</div>
+        </div>
+        <div class="muted">Impressum · Datenschutz</div>
+    </footer>
+
+    <script>
+        // kleines Formular-Verhalten (nur Frontend - für Produktion serverseitig senden)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const msg = document.getElementById('formMsg');
+            if (!name || !email || !message) {
+                msg.textContent = 'Bitte fülle Name, E‑Mail und Nachricht aus.';
+                return;
+            }
+            // einfache E‑Mail-Validierung
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                msg.textContent = 'Bitte gebe eine gültige E‑Mail-Adresse an.';
+                return;
+            }
+            // Simulierter Absendevorgang
+            msg.textContent = 'Sende...';
+            setTimeout(() => {
+                msg.textContent = 'Danke! Deine Anfrage wurde gesendet. Wir melden uns zeitnah.';
+                document.getElementById('contactForm').reset();
+            }, 800);
+        });
+
+        // dynamisches Jahr im Footer (falls JS verfügbar)
+        (function() {
+            try {
+                var el = document.querySelector('footer strong').nextElementSibling;
+                if (el) el.textContent = '© ' + new Date().getFullYear() + ' Alle Rechte vorbehalten';
+            } catch (e) { /* ignore */ }
+        }())
+    </script>
+</body>
+
+</html>
